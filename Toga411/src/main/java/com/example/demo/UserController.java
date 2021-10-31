@@ -64,6 +64,7 @@ class UserController {
 		  if (phoneNumber == null) {
 			  return;
 		  }
-	    repository.deleteByPhoneNumber(phoneNumber);
+	    //repository.deleteByPhoneNumber(phoneNumber);
+		repository.delete(repository.findByPhoneNumber(phoneNumber).get());
 	  }
 }
