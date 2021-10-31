@@ -12,7 +12,7 @@ By using UserRepository interface we can automatically do:
 - GET – retrieve the user
  */
 
-interface UserRepository extends JpaRepository <User, String> {
+interface UserRepository extends JpaRepository <User, Long> {
 	
 	/**
 	 * Retrieves an entity by its phoneNumber.
@@ -23,12 +23,12 @@ interface UserRepository extends JpaRepository <User, String> {
 	 */
 	Optional<User> findByPhoneNumber(String phoneNumber);
 	
-	/**
-	 * Deletes the entity with the given phoneNumber.
-	 *
-	 * @param phoneNumber must not be {@literal null}.
-	 * @throws IllegalArgumentException in case the given {@literal phoneNumber} is {@literal null}
-	 */
-	void deleteByPhoneNumber(String phoneNumber);
+// 	/**
+// 	 * Deletes the entity with the given phoneNumber.
+// 	 *
+// 	 * @param phoneNumber must not be {@literal null}.
+// 	 * @throws IllegalArgumentException in case the given {@literal phoneNumber} is {@literal null}
+// 	 */
+// 	void deleteByPhoneNumber(String phoneNumber);
 	
 }
